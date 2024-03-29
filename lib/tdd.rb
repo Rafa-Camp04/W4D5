@@ -32,3 +32,20 @@ class Array
 
 
 end
+
+class TowersOfHanoi
+
+    attr_reader :array1, :tower2, :tower3
+
+    def initialize
+        @array1 = []
+        @tower2 = []
+        @tower3 = []
+    end
+
+    def populate
+        @array1 = [3,2,1]
+    end
+
+
+end

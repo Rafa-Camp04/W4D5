@@ -49,6 +49,22 @@ describe "Array" do
         end
     end
 
+end
 
+
+describe "TowersOfHanoi" do
+
+    subject(:towers) {TowersOfHanoi.new}
+
+    it "should create a new instance with three empty arrays" do
+        expect(towers.array1).to eq([])
+    end
+
+    describe "#populate" do
+        it "should populate the towers" do
+            towers.populate
+            expect(towers.array1).to eq([3,2,1])
+        end
+    end
 
 end
