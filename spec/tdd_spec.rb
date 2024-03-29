@@ -49,21 +49,22 @@ describe "Array" do
         end
     end
 
-    describe "stock_picker" do
-        days = [30, 5,16,17,5,3,11,22]
-        it "should accept an array as an argument" do
-            expect{days.stock_picker}.not_to raise_error
-        end
-
-        it "should return the most profitable pair of days on which to fist buy the stock and then sell the stock" do
-            expect(days.stock_picker).to eq([5,7])
-        end
+end
 
 
+describe "TowersOfHanoi" do
+
+    subject(:towers) {TowersOfHanoi.new}
+
+    it "should create a new instance with three empty arrays" do
+        expect(towers.array1).to eq([])
     end
 
-
-
-
+    describe "#populate" do
+        it "should populate the towers" do
+            towers.populate
+            expect(towers.array1).to eq([3,2,1])
+        end
+    end
 
 end
