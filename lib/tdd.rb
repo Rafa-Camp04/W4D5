@@ -30,5 +30,20 @@ class Array
         new_array
     end
 
+    def stock_picker
+        array = []
+        max = 0
+      
+        self.each_with_index do |ele, idx|
+            self.each_with_index do |ele2, idx_2|
+                if (ele2 - ele) > max && idx < idx_2
+                    max = (ele2 - ele)
+                    array = [idx, idx_2]
+                end
+            end
+        end
+        array
+    end
+
 
 end
